@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'home#index'
+  get '/test', to: 'home#test'
 
   resources :users, only: [:show, :update, :edit], path: 'profil' # do
     # resources :profile_pics, only: [:create]

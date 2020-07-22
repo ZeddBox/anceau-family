@@ -6,7 +6,7 @@ Every year, we organize holiday with my family, but Facebook Group are terrible 
 
 I want to create a social network for my family to share content, pictures and organize next holidays easily
 
-### By Julien Anceau !
+### By Julien Anceau
 
 
 
