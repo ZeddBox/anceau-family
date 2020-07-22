@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kickoff</title>
+    <title>ANCEAU</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,13 +17,29 @@
 
   <% flash.each do |type, message| %>
     <% if type == "alert" %>
-      <div class="bg-red-500">
-        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell"></i>
+        </span>
+        <span class="inline-block align-middle mr-8">
+          <b class="capitalize"><%= message %></b>
+        </span>
+        <button class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" onclick="closeAlert(event)">
+          <span>×</span>
+        </button>
       </div>
     <% end %>
     <% if type == "notice" %>
-      <div class="bg-green-500">
-        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
+        <span class="text-xl inline-block mr-5 align-middle">
+          <i class="fas fa-bell"></i>
+        </span>
+        <span class="inline-block align-middle mr-8">
+          <b class="capitalize"><%= message %></b>
+        </span>
+        <button class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" onclick="closeAlert(event)">
+          <span>×</span>
+        </button>
       </div>
     <% end %>
   <% end %>
@@ -59,3 +75,13 @@
     </main>
   </body>
 </html>
+
+<script>
+  function closeAlert(event){
+    let element = event.target;
+    while(element.nodeName !== "BUTTON"){
+      element = element.parentNode;
+    }
+    element.parentNode.parentNode.removeChild(element.parentNode);
+  }
+</script>

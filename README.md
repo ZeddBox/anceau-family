@@ -1,24 +1,13 @@
-# README
+# Closed Social Network for my Family
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Presentation
 
-Things you may want to cover:
+Every year, we organize holiday with my family, but Facebook Group are terrible to organize things
 
-* Ruby version
+I want to create a social network for my family to share content, pictures and organize next holidays easily
 
-* System dependencies
+### By Julien Anceau !
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
