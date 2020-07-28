@@ -17,14 +17,16 @@ require("channels")
 import "stylesheets/application"
 
 import TurbolinksAdapter from 'vue-turbolinks'
-import Vue from 'vue/dist/vue.esm'
+import Vue from 'vue/dist/vue.min.js'
 import Hello from '../packs/components/hello.vue'
 import Dropdown from '../packs/components/dropdown.vue'
+import Profil from '../packs/components/profil.vue'
 
 Vue.use(TurbolinksAdapter)
 
 Vue.component('app', Hello)
 Vue.component('dropdown', Dropdown)
+Vue.component('profil', Profil)
 
 document.addEventListener('turbolinks:load', () => {
   window.onload = function () {
