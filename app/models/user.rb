@@ -15,6 +15,7 @@ class User < ApplicationRecord
   before_validation :downcase_email
   # after_create :welcome_send
 
+  has_one_attached :profile_pic
 
   extend FriendlyId
   friendly_id :name, use: :slugged
