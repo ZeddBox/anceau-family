@@ -1,3 +1,11 @@
 <p>Hello <%= @user.name %>!</p>
 
+<% if current_user.profile_pic.attached? == false %>
+<%= image_tag "https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg", style: 'height:50px;width:auto;'%>
+<% else %>
+<%= image_tag current_user.profile_pic_url, style: 'height:50px;width:auto;'%>
+<% end %>
+
+<%= link_to "Editez votre profil", edit_user_path(current_user.slug), class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+
 

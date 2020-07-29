@@ -60,4 +60,5 @@ gem 'sidekiq', '~> 6.0', '>= 6.0.1'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'dotenv-rails'
 
+gem "aws-sdk", '~> 3'
 gem "aws-sdk-s3", require: false

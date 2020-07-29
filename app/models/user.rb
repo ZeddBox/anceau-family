@@ -28,6 +28,12 @@ class User < ApplicationRecord
     slug.blank? || name_changed?
   end
 
+  def profile_pic_url
+    if self.profile_pic.attachment
+      self.profile_pic.attachment.service_url
+    end
+  end
+
   private
 
   def downcase_email

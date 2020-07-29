@@ -1,0 +1,9 @@
+ <h2 class="title font-bold mb-4">Photo de Profil</h2>
+<%= form_tag user_profile_pics_path(@user), multipart: true do %>
+  <div class="text-center">
+    <%= file_field_tag :profile_pic, class: "mb-3 choose-picture" %>  
+  </div> 
+  <div class="text-center">
+    <%= submit_tag "Mettre à jour", class: "btn btn-primary actions mb-3" %>
+  </div>
+<% end %>
