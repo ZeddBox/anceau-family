@@ -17,6 +17,9 @@ class User < ApplicationRecord
 
   has_one_attached :profile_pic
 
+  has_many :news, dependent: :destroy
+
+
   extend FriendlyId
   friendly_id :name, use: :slugged
 

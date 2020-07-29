@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     # get '/notifications/', to: 'modifications#index'
   end
 
+  resources :news, path: 'actualites'
+
   
   
 end
